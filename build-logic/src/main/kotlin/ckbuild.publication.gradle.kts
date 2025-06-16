@@ -42,6 +42,15 @@ mavenPublishing {
     }
 }
 
+publishing {
+    repositories {
+        maven {
+            name = "OpenEcard"
+            url = uri("https://mvn.ecsec.de/repository/ecard_thirdparty/")
+        }
+    }
+}
+
 // we ignore the singing requirement because:
 // * we should be able to run `publishToMavenLocal` without signing;
 // * signing is needed to Maven Central only, and it will anyway validate that the signature is present;
